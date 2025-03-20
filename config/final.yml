@@ -1,0 +1,5 @@
+name: sss-app-release-blobs
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/sss-app-release-blobs

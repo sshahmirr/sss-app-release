@@ -1,0 +1,5 @@
+check process rubyapp
+  with pidfile /var/vcap/sys/run/rubyapp/pid
+  start program "/var/vcap/jobs/rubyapp/bin/ctl start"
+  stop program "/var/vcap/jobs/rubyapp/bin/ctl stop"
+  group vcap

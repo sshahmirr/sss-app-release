@@ -1,0 +1,10 @@
+set -e -x
+
+cp -a initial-project-sss/* ${BOSH_INSTALL_TARGET}
+
+cd ${BOSH_INSTALL_TARGET}
+
+/var/vcap/packages/ruby-3.4/bin/bundle install \
+  --local \
+  --deployment \
+  --without development test

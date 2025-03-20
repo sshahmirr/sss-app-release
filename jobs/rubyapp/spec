@@ -1,0 +1,10 @@
+---
+name: rubyapp
+
+templates: 
+  ctl.erb: tmp/ctl
+
+packages:
+- ruby-3.4
+
+properties: {}
