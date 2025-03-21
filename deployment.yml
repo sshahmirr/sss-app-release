@@ -3,7 +3,7 @@ name: sss-bosh-deployment
 
 releases:
 - name: sss-app-release
-- version: "latest"
+  version: "latest"
 
 stemcells:
 - alias: ubuntu-jammy
