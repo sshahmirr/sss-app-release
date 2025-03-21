@@ -1,5 +1,7 @@
 name: sss-app-release-blobs
 blobstore:
-  provider: local
+  provider: s3
   options:
-    blobstore_path: /tmp/sss-app-release-blobs
+    bucket_name: a9s-blobs
+    endpoint: https://s3-eu-west-1.amazonaws.com
+    region: eu-west-1
