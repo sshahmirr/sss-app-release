@@ -1,0 +1,26 @@
+---
+name: sss-bosh-deployment
+
+releases:
+- name: sss-app-release
+- version: "latest"
+
+stemcells:
+- alias: ubuntu-jammy
+  os: ubuntu-jammy
+  version: "latest"
+
+instance_groups:
+- name: rubyapp
+  instances: 1
+  azs: [z1, z2]
+  jobs:
+  - name: rubyapp
+    release: sss-app-release
+    properties:
+  vm_type: small
+  stemcell: ubuntu-jammy
+  networks:
+  - name: default
+
+  persistent_disk_type: medium
