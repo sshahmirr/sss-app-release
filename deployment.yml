@@ -10,6 +10,13 @@ stemcells:
   os: ubuntu-jammy
   version: "latest"
 
+update:
+  canaries: 1
+  canary_watch_time: 15000-30000
+  max_in_flight: 1
+  serial: true
+  update_watch_time: 15000-300000
+
 instance_groups:
 - name: rubyapp
   instances: 1
@@ -17,7 +24,6 @@ instance_groups:
   jobs:
   - name: rubyapp
     release: sss-app-release-blobs
-    properties:
   vm_type: small
   stemcell: ubuntu-jammy
   networks:
