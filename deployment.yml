@@ -2,7 +2,7 @@
 name: sss-bosh-deployment
 
 releases:
-- name: sss-app-release
+- name: sss-app-release-blobs
   version: "latest"
 
 stemcells:
@@ -16,7 +16,7 @@ instance_groups:
   azs: [z1, z2]
   jobs:
   - name: rubyapp
-    release: sss-app-release
+    release: sss-app-release-blobs
     properties:
   vm_type: small
   stemcell: ubuntu-jammy
