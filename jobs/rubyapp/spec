@@ -2,7 +2,7 @@
 name: rubyapp
 
 templates: 
-  ctl.erb: tmp/ctl
+  ctl.erb: bin/ctl
 
 packages:
 - ruby-3.4
